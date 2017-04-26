@@ -1,0 +1,10 @@
+sub GetTemplates()
+	local templist$, tempnumber
+	templist$ = StripLFoffSysCmd$(system$("ls -1 " + TemplateDir$))
+	tempnumber= token(templist$, a$(), "\n")
+	dim b$(tempnumber)
+	for f = 1 to tempnumber
+		b$(f) = left$(a$(f), len(a$(f)) - 4) //strip off .zip extension
+	next f
+end sub
+
