@@ -13,11 +13,11 @@ import libclasqm_main
 ##The variables will be used in the About Box and in naming the program.
  
 ProgramName$ = "yabTemplatePicker"
-AuthorName$ = "Name of Author"
+AuthorName$ = "Michel Clasquin-Johnson"
 ProgramVersion$ = "V0.1"
-ProgramBriefDescription$ = "Brief Description of your program."
-ProgramLicense$ = "Public Domain/Freeware/GPL/Artistic License/Commercial"
-ProgramAcknowledgements$ ="With thanks to ......."
+ProgramBriefDescription$ = "A TemplatePicker for Yabadabbadoo."
+ProgramLicense$ = "Public Domain"
+ProgramAcknowledgements$ =""
  
 //*************************
 //*****Global Variables****
@@ -29,10 +29,14 @@ ProgramAcknowledgements$ ="With thanks to ......."
 DEBUG = 1
 //change this to DEBUG = 0 when you are ready to bind the program for distribution
 TempDir$=TempDir$() 
- ProgramDir$=WhereAmI$()
- TemplateDir$=ProgramDir$ + "/templates"
- dim a$(1) //this array will hold list of templates from TemplateDir$
- dim b$(1) //this array will hold the templates witout .zip extension
+ProgramDir$=WhereAmI$()
+TemplateDir$=ProgramDir$ + "/templates"
+READMETemp$= TempDir$ + "/README"
+ScreenshotTemp$= TempDir$ + "/Template.png"
+dim a$(1) //this array will hold list of templates from TemplateDir$
+dim b$(1) //this array will hold the templates witout .zip extension
+xdim= 0 //width of window
+ydim= 0 //height of window
   
 ##########################
 ######Preliminary Commands#####

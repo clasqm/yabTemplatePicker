@@ -13,17 +13,20 @@ while(not leavingLoop)
 			case "_QuitRequested":
 			case "MainWindow:_QuitRequested":
 			case "MainWindow:File:Quit":
+			case "CancelButton"
 				leavingLoop = true
 				break
 			case "MainWindow:Help:About":
 				Alert ProgramName$ + " " + ProgramVersion$ + "\n" + "by " + AuthorName$ +"\n\n" + ProgramBriefDescription$ + "\n" + ProgramLicense$ + "\n" + ProgramAcknowledgements$, "OK", "none"
+			case "ScreenshotButton"
+				DisplayScreenshot()
+				break
 			default:
 				break
 		end switch
+		if instr(msg$(everyCommand), "TemplateList:_") ShowREADME()
 	next everyCommand
 wend
 
 CloseWindow()
-
-end
 

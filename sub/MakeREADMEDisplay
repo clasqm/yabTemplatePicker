@@ -1,0 +1,4 @@
+sub MakeREADMEDisplay()
+	textedit 205, 30 to xdim-5, ydim - 145, "READMEBox", 1, "MainWindow"
+end sub
+

@@ -1,6 +1,20 @@
 sub OpenWindow()
 	//Setup the main window here
-	window open 100,100 to 600,500, "MainWindow", "Main Window"
+	local  yTPxorigin, yTPyorigin, yTPxwidth, yTPyheight
+	yTPxorigin = 522: yTPyorigin = 5: yTPxwidth = 494: yTPyheight = 756
+	if peek("desktopwidth") < 1024  yTPxwidth = peek("screenwidth") - yTPxorigin
+	if peek("desktopheight") < 768 yTPyheight = peek("desktopheight") -10
+	window open yTPxorigin,yTPyorigin to yTPxorigin + yTPxwidth,yTPyorigin + yTPyheight, "MainWindow", "yabTemplatePicker"
+	Window set "MainWindow", "look", "modal"
+	Window set "MainWindow", "flags", "not-resizable"
+	Window set "MainWindow", "flags", "not-zoomable"
+	xdim=GetDimensions("x", "MainWindow")
+	ydim=GetDimensions("y", "MainWindow")
 	MakeMenu()
+	MakeTemplateList()
+	MakeREADMEDisplay()
+	MakeButtons()
+	listbox select "TemplateList",1
+	ShowREADME()
 end sub
 

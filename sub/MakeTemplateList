@@ -1,0 +1,7 @@
+sub MakeTemplateList()
+	listbox 5,30 to 200, ydim - 145, "TemplateList", 1, "MainWindow" 
+	for f = 1 to arraysize(b$(),1)
+		listbox add "TemplateList", f, b$(f)
+	next f
+end sub
+

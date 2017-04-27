@@ -1,0 +1,9 @@
+sub MakeButtons()
+	local midpoint
+	midpoint = int(xdim / 2)
+	button 5, ydim - 135 to midpoint - 2, ydim - 95, "ScreenshotButton", "Display a screenshot", "MainWindow"
+	button midpoint +3, ydim - 135 to xdim - 5, ydim - 95, "CancelButton", "Cancel - I'll work from scratch", "MainWindow"
+	button 5, ydim - 90 to xdim - 5, ydim - 50, "IDEButton", "Export this project  in yab IDE format", "MainWindow"
+	button 5, ydim - 45 to xdim - 5, ydim - 5, "YabadabbadooButton", "Export this project  in Yabdabbadoo format", "MainWindow"
+end sub
+
