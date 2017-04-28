@@ -1,9 +1,9 @@
 sub DisplayScreenshot()
-	local readme$, ItemNumber, Item$, Item_nozip$
+	local ItemNumber, Item$, Item_nozip$
 	ItemNumber = listbox get "TemplateList"
 	Item$ = a$(ItemNumber)
 	Item_nozip$ = b$(ItemNumber)
-	system("unzip -o -qq -j " + TemplateDir$ + "/" + Item$ + " " + Item_nozip$ + "/other/Template.png -d " + TempDir$)
+	system("unzip -o -qq -j " + TemplateDir$ + "/" + Item$ + " other/Template.png -d " + TempDir$)
 	system("/boot/system/apps/ShowImage " + ScreenshotTemp$ + " &")
 	wait 0.2
 	system("rm -f "  +  ScreenshotTemp$)

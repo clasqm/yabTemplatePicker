@@ -1,0 +1,11 @@
+sub MakeNewProject()
+	GetProjectDirectory("Create a directory in which to keep your project. This is really going to work better if the path to your project does not contain spaces or special characters.")
+	while(ProjectDir$ = "")
+		GetProjectDirectory("An error occurred. Please re-select your new directory")	
+	wend
+	if CheckForProjectFiles() = 1 then 
+		Alert ProjectDir$ + " IS AN EXISTING YABADABBADOO DIRECTORY YOU WERE GOING TO OVERWRITE!\n\nYOU ARE TOO TIRED TO BE PROGRAMMING.\n\n ABORTING PROGRAM.", "OK", "warning"
+		CloseWindow()
+	endif
+end sub
+

@@ -1,0 +1,10 @@
+sub CheckForProjectFiles()
+	if FileExists(ProjectDir$ + "/mainloop") = 0 then
+		return 0
+	elseif FileExists(ProjectDir$ + "/prologue") = 0 then
+		return 0
+	else
+		return 1
+	endif
+end sub
+

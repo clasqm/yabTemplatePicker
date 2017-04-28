@@ -3,7 +3,7 @@ sub ShowREADME()
 	ItemNumber = listbox get "TemplateList"
 	Item$ = a$(ItemNumber)
 	Item_nozip$ = b$(ItemNumber)
-	system("unzip -o -qq -j " + TemplateDir$ + "/" + Item$ + " " + Item_nozip$ + "/other/README -d " + TempDir$)
+	system("unzip -o -qq -j " + TemplateDir$ + "/" + Item$ + " " + "other/README -d " + TempDir$)
 	textedit clear "READMEBox"
 	readme$ = system$("cat " +  READMETemp$)
 	textedit add "READMEBox", readme$

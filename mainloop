@@ -21,6 +21,12 @@ while(not leavingLoop)
 			case "ScreenshotButton"
 				DisplayScreenshot()
 				break
+			case "IDEButton"
+				ExtractIDE()
+				break
+			case "YabadabbadooButton"
+				ExtractYabadabbadoo()
+				break
 			default:
 				break
 		end switch

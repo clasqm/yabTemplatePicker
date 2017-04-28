@@ -37,6 +37,7 @@ dim a$(1) //this array will hold list of templates from TemplateDir$
 dim b$(1) //this array will hold the templates witout .zip extension
 xdim= 0 //width of window
 ydim= 0 //height of window
+if peek("argument") > 0 ProjectDir$=peek$("argument")
   
 ##########################
 ######Preliminary Commands#####
