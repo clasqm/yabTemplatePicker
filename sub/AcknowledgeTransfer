@@ -2,9 +2,7 @@ sub AcknowledgeTransfer(fromwhere$)
 	local ItemNumber,w$(1)
 	static trainingwheels
 	ItemNumber = alert "Template transferred to "+ ProjectDir$, "Another ..", "", "OK", "info"
-	if ItemNumber = 2 then
-		print ProjectDir$
-		CloseWindow()
+	if ItemNumber = 2 CloseWindow()
 	else
 		tokens = split(ProjectDir$,w$(),"/")
 		if w$(tokens - 1) = "Desktop" and trainingwheels = 0 and fromwhere$ = "ExtractYabadabbadoo" then 
@@ -16,7 +14,6 @@ sub AcknowledgeTransfer(fromwhere$)
 			ProjectBasePath$ = ProjectBasePath$ + "/" + w$(f)
 		next f
 		repeater = repeater + 1
-		print "none"
 	endif
 end sub
 

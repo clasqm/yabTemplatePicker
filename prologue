@@ -26,7 +26,7 @@ ProgramAcknowledgements$ =""
 ## Technically, yab does not require you to declare global variables,
 ##It just is a really, really good idea to do it anyway.
 // set DEBUG = 1 to print out all messages on the console
-DEBUG = 1
+DEBUG = 0
 //change this to DEBUG = 0 when you are ready to bind the program for distribution
 TempDir$ = TempDir$() 
 ProgramDir$ = WhereAmI$()
