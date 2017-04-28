@@ -1,6 +1,10 @@
 sub ExtractIDE()
-
-
-
+	local ItemNumber, Item$
+	if ProjectDir$ = "" or repeater <> 0 MakeNewProject()
+	ItemNumber = listbox get "TemplateList"
+	Item$ = a$(ItemNumber)
+	Item_nozip$ = b$(ItemNumber)
+	system("unzip -o -qq -j " + TemplateDir$ + "/" + Item$ + " binder/* -d " + ProjectDir$)
+	AcknowledgeTransfer("ExtractIDE")
 end sub
 

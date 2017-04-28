@@ -1,15 +1,9 @@
 sub ExtractYabadabbadoo()
-	local ItemNumber, Item$, Item_nozip$
-	if ProjectDir$ = "" MakeNewProject()
+	local ItemNumber, Item$
+	if ProjectDir$ = ""  or repeater <> 0 MakeNewProject()
 	ItemNumber = listbox get "TemplateList"
 	Item$ = a$(ItemNumber)
 	system("unzip -u -qq " + TemplateDir$ + "/" + Item$ + " -d " + ProjectDir$)
-	item = alert "Template transferred to "+ ProjectDir$, "Another ..", "", "OK", "info"
-	if item = 2 then
-		print ProjectDir$
-		CloseWindow()
-	else
-		ProjectDir$ = ""
-	endif
+	AcknowledgeTransfer(" ExtractYabadabbadoo")
 end sub
 

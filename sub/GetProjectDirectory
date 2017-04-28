@@ -1,5 +1,5 @@
 sub GetProjectDirectory(displayme$)
 	alert displayme$, "OK", "Info"
-	ProjectDir$ = filepanel "Load-Directory", "Project Directory?", "/boot/home"
+	ProjectDir$ = filepanel "Load-Directory", "Project Directory?", ProjectBasePath$
 end sub
 

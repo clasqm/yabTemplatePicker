@@ -28,16 +28,18 @@ ProgramAcknowledgements$ =""
 // set DEBUG = 1 to print out all messages on the console
 DEBUG = 1
 //change this to DEBUG = 0 when you are ready to bind the program for distribution
-TempDir$=TempDir$() 
-ProgramDir$=WhereAmI$()
-TemplateDir$=ProgramDir$ + "/templates"
-READMETemp$= TempDir$ + "/README"
+TempDir$ = TempDir$() 
+ProgramDir$ = WhereAmI$()
+TemplateDir$ = ProgramDir$ + "/templates"
+ProjectBasePath$ = "/boot/home/"
+READMETemp$ = TempDir$ + "/README"
 ScreenshotTemp$= TempDir$ + "/Template.png"
 dim a$(1) //this array will hold list of templates from TemplateDir$
 dim b$(1) //this array will hold the templates witout .zip extension
-xdim= 0 //width of window
-ydim= 0 //height of window
-if peek("argument") > 0 ProjectDir$=peek$("argument")
+xdim = 0 //width of window
+ydim = 0 //height of window
+if peek("argument") > 0 ProjectDir$ = peek$("argument")
+repeater = 0
   
 ##########################
 ######Preliminary Commands#####
@@ -48,7 +50,6 @@ if peek("argument") > 0 ProjectDir$=peek$("argument")
  
 GetTemplates() 
 OpenWindow()
- 
  
 #######End of Prologue#######
 

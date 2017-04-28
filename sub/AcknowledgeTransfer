@@ -1,0 +1,22 @@
+sub AcknowledgeTransfer(fromwhere$)
+	local ItemNumber,w$(1)
+	static trainingwheels
+	ItemNumber = alert "Template transferred to "+ ProjectDir$, "Another ..", "", "OK", "info"
+	if ItemNumber = 2 then
+		print ProjectDir$
+		CloseWindow()
+	else
+		tokens = split(ProjectDir$,w$(),"/")
+		if w$(tokens - 1) = "Desktop" and trainingwheels = 0 and fromwhere$ = "ExtractYabadabbadoo" then 
+			alert "A project on the Desktop will not bind succesfully in Yabadabbadoo. I will create the project, but consider exiting, then moving it (use Tracker).", "OK", "warning"
+			trainingwheels = trainingwheels + 1
+		endif
+		ProjectBasePath$ = ""
+		for f = 1 to tokens - 1
+			ProjectBasePath$ = ProjectBasePath$ + "/" + w$(f)
+		next f
+		repeater = repeater + 1
+		print "none"
+	endif
+end sub
+
