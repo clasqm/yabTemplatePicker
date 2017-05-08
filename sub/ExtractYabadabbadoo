@@ -4,6 +4,6 @@ sub ExtractYabadabbadoo()
 	ItemNumber = listbox get "TemplateList"
 	Item$ = a$(ItemNumber)
 	system("unzip -u -qq " + TemplateDir$ + "/" + Item$ + " -d " + ProjectDir$)
-	AcknowledgeTransfer(" ExtractYabadabbadoo")
+	AcknowledgeTransfer("ExtractYabadabbadoo")
 end sub
 

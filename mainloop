@@ -15,6 +15,7 @@ while(not leavingLoop)
 			case "MainWindow:File:Quit":
 			case "CancelButton"
 				leavingLoop = true
+				print "cancelled"
 				break
 			case "MainWindow:Help:About":
 				Alert ProgramName$ + " " + ProgramVersion$ + "\n" + "by " + AuthorName$ +"\n\n" + ProgramBriefDescription$ + "\n" + ProgramLicense$ + "\n" + ProgramAcknowledgements$, "OK", "none"
